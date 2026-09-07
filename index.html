@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free IT2511 Information Assurance reviewer and 30-item mock exam covering wireless security, Wi-Fi attacks, Bluetooth threats, mobile security, OWASP Mobile Top 10, and countermeasures." />
+  <meta name="keywords" content="IT2511 reviewer, Information Assurance reviewer, wireless security reviewer, mobile security mock exam, Wi-Fi attacks, Bluetooth attacks, OWASP Mobile Top 10, cybersecurity quiz" />
+  <meta name="author" content="IT2511 Information Assurance Reviewer" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IT2511 Information Assurance Reviewer" />
+  <meta property="og:description" content="Practice wireless and mobile security with a free 30-item IT2511 mock exam." />
+  <meta property="og:locale" content="en_PH" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="IT2511 Information Assurance Reviewer" />
+  <meta name="twitter:description" content="Free wireless and mobile security reviewer with practice and timed exam modes." />
+  <link rel="canonical" href="./" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>IT2511 Information Assurance Reviewer | Wireless & Mobile Security Mock Exam</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "name": "IT2511 Information Assurance Reviewer",
+      "description": "A free 30-item practice reviewer and mock exam for wireless and mobile security topics.",
+      "learningResourceType": "Practice Test",
+      "educationalLevel": "Undergraduate",
+      "inLanguage": "en",
+      "about": [
+        "Wireless security",
+        "Wi-Fi attacks",
+        "Bluetooth security",
+        "Mobile security",
+        "OWASP Mobile Top 10"
+      ],
+      "isAccessibleForFree": true
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="bg-indigo-600 text-white p-2 rounded-lg font-black text-lg tracking-wider shadow-lg shadow-indigo-500/20">
+          IT2511
+        </div>
+        <div>
+          <h1 class="font-bold text-sm sm:text-base leading-tight text-slate-100">Wireless & Mobile Attacks Reviewer</h1>
+          <p class="text-xs text-slate-400">Handouts 01 & 02 Comprehensive Mock Exam (30 Items)</p>
+        </div>
+      </div>
+
+      <div id="examMetaBar" class="hidden flex items-center space-x-4">
+        <!-- Timer -->
+        <div id="timerContainer" class="flex items-center space-x-2 bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
+          <svg class="w-4 h-4 text-amber-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span id="timerDisplay" class="font-mono text-sm font-semibold text-amber-400">30:00</span>
+        </div>
+
+        <!-- Submit Early Button -->
+        <button id="finishExamBtn" onclick="confirmFinishExam()" class="bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-all shadow shadow-rose-600/30">
+          Submit Exam
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+
+    <!-- Screen 1: Welcome & Settings -->
+    <section id="welcomeScreen" class="max-w-3xl mx-auto w-full bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur">
+      <div class="text-center mb-8">
+        <span class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 rounded-full text-xs font-semibold tracking-wide uppercase mb-3">
+          Finals / Midterms Readiness Review
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">IT2511 Mastery Assessment</h2>
+        <p class="text-slate-400 mt-2 text-sm sm:text-base">
+          Evaluate your mastery of Wireless standards, Wi-Fi/Bluetooth attacks, mobile threat anatomy, OWASP Top 10 Mobile, and countermeasure tools.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <div class="p-4 rounded-xl border border-slate-700 bg-slate-800/50">
+          <h3 class="font-semibold text-indigo-300 text-sm mb-1">Coverage - Handout 1 (Wireless)</h3>
+          <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+            <li>Spread Spectrum (DSSS, FHSS, OFDM)</li>
+            <li>802.11 Standards (a, b, g, n, ah, ac, ad) & WPAN</li>
+            <li>WEP, WPA, WPA2, WPA3 (GCMP-256, CCMP)</li>
+            <li>Rogue AP, KRACK, Honeypots, Aircrack suite</li>
+            <li>Bluetooth modes & attacks (Bluejacking, KNOB, etc.)</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-700 bg-slate-800/50">
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Coverage - Handout 2 (Mobile)</h3>
+          <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+            <li>Anatomy of Attacks (Device, Network, Cloud)</li>
+            <li>Mobile Browser & SMS Threats (MitMo, SMiShing)</li>
+            <li>iOS Keychain, Jailbreaking vs Android Rooting</li>
+            <li>OWASP Top 10 Mobile (M1 to M10)</li>
+            <li>MDM, Remote Wipe & Enterprise Security Tools</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mode Selector -->
+      <div class="space-y-4 mb-8">
+        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Select Practice Mode</label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <label class="cursor-pointer border-2 border-indigo-600 bg-indigo-950/30 p-4 rounded-xl flex flex-col justify-between hover:border-indigo-400 transition" id="modePracticeLabel">
+            <input type="radio" name="examMode" value="practice" checked class="hidden" onchange="toggleModeSelection(this)" />
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-base">Study / Practice Mode</span>
+              <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+            </div>
+            <p class="text-xs text-slate-400">Immediate rationale, no time pressure, learn as you answer every question.</p>
+          </label>
+
+          <label class="cursor-pointer border-2 border-slate-700 bg-slate-850/40 p-4 rounded-xl flex flex-col justify-between hover:border-slate-500 transition" id="modeTimedLabel">
+            <input type="radio" name="examMode" value="timed" class="hidden" onchange="toggleModeSelection(this)" />
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-base">Timed Exam Mode</span>
+              <span class="w-3 h-3 rounded-full border border-slate-500"></span>
+            </div>
+            <p class="text-xs text-slate-400">30-minute strict exam timer, results & full rationales provided at submission.</p>
+          </label>
+        </div>
+      </div>
+
+      <button onclick="startExam()" class="w-full py-3.5 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-base shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center space-x-2">
+        <span>Start 30-Item Mock Exam</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- Screen 2: Exam Interface -->
+    <section id="examScreen" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left / Center: Question Box -->
+      <div class="lg:col-span-8 bg-slate-800/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-xl">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-6 pb-4 border-b border-slate-700/80">
+          <div class="flex items-center space-x-3">
+            <span id="questionCategoryTag" class="px-3 py-1 bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 rounded-full text-xs font-semibold">
+              Wireless Encryption
+            </span>
+            <span class="text-xs text-slate-400 font-medium" id="questionSourceTag">Handout 01</span>
+          </div>
+
+          <div class="flex items-center space-x-3">
+            <button onclick="toggleFlagCurrentQuestion()" id="flagBtn" class="flex items-center space-x-1 text-xs px-2.5 py-1.5 rounded-lg border border-slate-600 text-slate-300 hover:border-amber-400 hover:text-amber-400 transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+              </svg>
+              <span id="flagText">Flag for Review</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Title -->
+        <div class="mb-6">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+            Question <span id="currentQIndexDisplay">1</span> of 30
+          </div>
+          <h3 id="questionText" class="text-base sm:text-lg font-semibold text-slate-100 leading-relaxed">
+            Question prompt goes here...
+          </h3>
+        </div>
+
+        <!-- Answer Choices -->
+        <div id="optionsContainer" class="space-y-3 mb-6">
+          <!-- Dynamic Options Injected Here -->
+        </div>
+
+        <!-- Practice Mode Rationale Box (Shown after selection in practice mode) -->
+        <div id="feedbackBox" class="hidden p-4 rounded-xl mb-6 border transition-all text-sm leading-relaxed">
+          <div class="flex items-center space-x-2 font-bold mb-1" id="feedbackTitle">
+            <!-- Correct / Incorrect banner -->
+          </div>
+          <p id="feedbackRationale" class="text-slate-300 text-xs sm:text-sm"></p>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-between pt-4 border-t border-slate-700/80">
+          <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-4 py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-200 text-sm font-semibold disabled:opacity-40 disabled:cursor-not-allowed transition">
+            &larr; Previous
+          </button>
+          <div class="text-xs text-slate-400 font-mono" id="progressStatusText">
+            Answered: 0 / 30
+          </div>
+          <button id="nextBtn" onclick="navigateQuestion(1)" class="px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Question Palette / Navigator -->
+      <div class="lg:col-span-4 space-y-6">
+        <div class="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="font-bold text-sm text-slate-200 uppercase tracking-wider">Exam Navigator</h4>
+            <span class="text-xs text-slate-400" id="navCompletionPct">0% Complete</span>
+          </div>
+
+          <!-- Grid of 30 question numbers -->
+          <div id="questionGrid" class="grid grid-cols-5 sm:grid-cols-6 gap-2">
+            <!-- 30 buttons rendered by JS -->
+          </div>
+
+          <!-- Legend -->
+          <div class="grid grid-cols-2 gap-2 mt-5 pt-4 border-t border-slate-700/70 text-[11px] text-slate-400">
+            <div class="flex items-center space-x-1.5">
+              <span class="w-3 h-3 rounded bg-indigo-600 inline-block"></span>
+              <span>Answered</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <span class="w-3 h-3 rounded bg-slate-700 border border-slate-600 inline-block"></span>
+              <span>Unanswered</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <span class="w-3 h-3 rounded bg-amber-500/30 border border-amber-500 text-amber-400 inline-block"></span>
+              <span>Flagged</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <span class="w-3 h-3 rounded ring-2 ring-indigo-400 inline-block"></span>
+              <span>Current</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Summary Box -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4 text-xs text-slate-400 space-y-2">
+          <div class="font-semibold text-slate-300">Quick Tips:</div>
+          <p>• Click any question number above to jump directly to it.</p>
+          <p>• Use "Flag for Review" on complex scenarios to double check before submission.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Screen 3: Results & Diagnostic Summary -->
+    <section id="resultScreen" class="hidden max-w-4xl mx-auto w-full space-y-8">
+      <div class="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl text-center">
+        <span id="resultBadge" class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+          Exam Complete
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2" id="scorePercentage">0%</h2>
+        <p class="text-slate-300 text-base" id="scoreFraction">You scored 0 out of 30</p>
+        <p class="text-sm mt-2" id="resultFeedbackNote"></p>
+
+        <!-- Category breakdown -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 text-left" id="categoryBreakdownContainer">
+          <!-- Populated dynamically -->
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8 pt-6 border-t border-slate-700/80">
+          <button onclick="restartExam()" class="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition shadow-lg shadow-indigo-600/30">
+            Retake Exam
+          </button>
+          <button onclick="scrollToReviewSection()" class="px-6 py-2.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 text-sm font-semibold transition">
+            Review Answers & Explanations
+          </button>
+        </div>
+      </div>
+
+      <!-- Item by Item Review List -->
+      <div id="fullReviewSection" class="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl">
+        <h3 class="text-xl font-bold text-white mb-6 pb-3 border-b border-slate-700 flex items-center justify-between">
+          <span>Comprehensive Item Review</span>
+          <span class="text-xs font-normal text-slate-400">All 30 items with official handout rationales</span>
+        </h3>
+        <div id="reviewItemsList" class="space-y-6">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mt-auto border-t border-slate-800 py-4 text-center text-xs text-slate-500">
+    STI IT2511 Reviewer • Wireless Attacks (Handout 01) & Mobile Attacks (Handout 02)
+  </footer>
+
+  <noscript>
+    <section class="max-w-3xl mx-auto p-6 text-slate-200">
+      <h2>IT2511 Information Assurance Reviewer</h2>
+      <p>This free study reviewer covers wireless security, Wi-Fi and Bluetooth attacks, mobile security, OWASP Mobile Top 10, and enterprise countermeasures.</p>
+      <p>Enable JavaScript to take the interactive 30-item practice or timed mock exam and view answer rationales.</p>
+    </section>
+  </noscript>
+
+  <script>
+    // 30 High-Yield Questions explicitly mapped to Handout 1 and Handout 2
+    const questions = [
+      // --- HANDOUT 1: WIRELESS ATTACKS AND COUNTERMEASURES ---
+      {
+        id: 1,
+        source: "Handout 01: Wireless",
+        category: "Wireless Terminologies",
+        question: "Which spread spectrum technique multiplies the original data signal with a pseudo-random noise-spreading code to protect it against interference and jamming?",
+        options: [
+          "Direct-sequence Spread Spectrum (DSSS)",
+          "Frequency-hopping Spread Spectrum (FHSS)",
+          "Orthogonal Frequency-division Multiplexing (OFDM)",
+          "Multiple Input, Multiple Output-OFDM (MIMO-OFDM)"
+        ],
+        correct: 0,
+        rationale: "Direct-sequence Spread Spectrum (DSSS) multiplies the original data signal with a pseudo-random noise-spreading code to protect against interference. FHSS rapidly switches among many channels, while OFDM splits a signal into orthogonal sub-carrier frequencies."
+      },
+      {
+        id: 2,
+        source: "Handout 01: Wireless",
+        category: "Wireless Standards",
+        question: "Which IEEE 802.11 amendment is also known as 'Wi-Fi HaLow' and utilizes the 900 MHz band for extended-range Internet of Things (IoT) communications?",
+        options: [
+          "IEEE 802.11ad",
+          "IEEE 802.11ah",
+          "IEEE 802.11ac",
+          "IEEE 802.11e"
+        ],
+        correct: 1,
+        rationale: "IEEE 802.11ah (Wi-Fi HaLow) operates in the 900 MHz band to provide longer range and extended connectivity for IoT devices. 802.11ad operates at 60 GHz, 802.11ac at 5 GHz, and 802.11e provides QoS mechanisms at Layer 2."
+      },
+      {
+        id: 3,
+        source: "Handout 01: Wireless",
+        category: "Wireless Standards",
+        question: "Which IEEE standard governs Wireless Personal Area Networks (WPAN) with low data rate (250 Kbps) and mesh capability specifically designed to increase battery life in devices like ZigBee?",
+        options: [
+          "IEEE 802.15.1",
+          "IEEE 802.15.4",
+          "IEEE 802.15.5",
+          "IEEE 802.12"
+        ],
+        correct: 1,
+        rationale: "IEEE 802.15.4 specifies low data rate (250 Kbps) WPAN networks used by ZigBee to extend battery life over mesh topologies. 802.15.1 defines Bluetooth, 802.15.5 specifies full/half-mesh topologies, and 802.12 defines Demand Priority (100VG-AnyLAN)."
+      },
+      {
+        id: 4,
+        source: "Handout 01: Wireless",
+        category: "Wireless Encryption",
+        question: "Which cryptographic encryption algorithm and authentication protocol suite are utilized by WPA3 to secure wireless networks?",
+        options: [
+          "TKIP for encryption and 32-bit CRC for authentication",
+          "AES with CCMP for encryption and EAP for authentication",
+          "Galois/Counter Mode-256 (GCMP-256) and HMAC-SHA-384",
+          "RC4 with 24-bit IV and WEP cloaking for authentication"
+        ],
+        correct: 2,
+        rationale: "According to Handout 1, WPA3 utilizes Galois/Counter Mode-256 (GCMP-256) for encryption and HMAC-SHA-384 for message authentication. WPA used TKIP/MIC, and WPA2 used AES-CCMP."
+      },
+      {
+        id: 5,
+        source: "Handout 01: Wireless",
+        category: "Wireless Encryption",
+        question: "What protocol encapsulates Extensible Authentication Protocol (EAP) within an encrypted and authenticated Transport Layer Security (TLS) tunnel?",
+        options: [
+          "RADIUS",
+          "PEAP (Protected EAP)",
+          "LEAP",
+          "TKIP"
+        ],
+        correct: 1,
+        rationale: "PEAP (Protected Extensible Authentication Protocol) encapsulates EAP within an encrypted and authenticated TLS tunnel. RADIUS is the centralized authentication server, and LEAP is Cisco's proprietary EAP variant."
+      },
+      {
+        id: 6,
+        source: "Handout 01: Wireless",
+        category: "Wireless Network Attacks",
+        question: "Which type of unauthorized association occurs when an attacker activates soft APs on an infected victim device to connect directly into the corporate enterprise network?",
+        options: [
+          "Accidental Association",
+          "Malicious Association",
+          "Client Mis-Association",
+          "Ad-Hoc Relaying"
+        ],
+        correct: 1,
+        rationale: "Unauthorized association has two forms: malicious association (where an attacker infects a machine and uses soft APs to gain enterprise network access) and accidental association (where a host connects unintentionally to an overlapping neighbor network)."
+      },
+      {
+        id: 7,
+        source: "Handout 01: Wireless",
+        category: "Wireless Network Attacks",
+        question: "An attacker sets up a rogue access point with high-gain antennas advertising the exact same SSID as a legitimate target corporate network to lure authorized clients. What is this attack called?",
+        options: [
+          "Jamming Signal Attack",
+          "Honeypot AP Attack",
+          "KRACK Exploitation",
+          "Demand Priority Attack"
+        ],
+        correct: 1,
+        rationale: "A Honeypot AP attack occurs when an attacker sets up a rogue AP with high-gain antennas using the same SSID as the target corporate network, tricking wireless clients into associating so sensitive credentials can be captured."
+      },
+      {
+        id: 8,
+        source: "Handout 01: Wireless",
+        category: "Wireless Network Attacks",
+        question: "The Key Reinstallation Attack (KRACK) compromises wireless networks by exploiting vulnerabilities in which of the following mechanisms?",
+        options: [
+          "The WEP 24-bit Initialization Vector renewal process",
+          "The four-way handshake process in WPA2",
+          "The beacon frame advertisement in SSID cloaking",
+          "The MAC address filtering tables on access points"
+        ],
+        correct: 1,
+        rationale: "KRACK exploits design and implementation flaws in the four-way handshake process of the WPA2 authentication protocol, which is responsible for establishing connections and generating fresh encryption keys."
+      },
+      {
+        id: 9,
+        source: "Handout 01: Wireless",
+        category: "Wireless Attack Tools",
+        question: "Within the Aircrack-ng suite, which specific tool is used for packet injection, traffic generation, fake authentication, and ARP request replay?",
+        options: [
+          "Airodump-ng",
+          "Airmon-ng",
+          "Aireplay-ng",
+          "Airdecap-ng"
+        ],
+        correct: 2,
+        rationale: "Aireplay-ng is used for traffic generation, fake authentication, packet replay, and ARP request injection. Airodump-ng captures raw 802.11 frames, Airmon-ng activates monitor mode, and Airdecap-ng decrypts captured packets."
+      },
+      {
+        id: 10,
+        source: "Handout 01: Wireless",
+        category: "Wireless Attack Tools",
+        question: "Which component of the Aircrack-ng suite is used to recover WEP keys specifically from the Wireless Zero Configuration utility in Windows XP?",
+        options: [
+          "WZCook",
+          "Wesside-ng",
+          "Easside-ng",
+          "Tkiptun-ng"
+        ],
+        correct: 0,
+        rationale: "WZCook recovers WEP keys directly from the Wireless Zero Configuration (WZC) utility of Windows XP. Wesside-ng recovers WEP keys automatically within minutes, and Tkiptun-ng injects frames into WPA TKIP networks."
+      },
+      {
+        id: 11,
+        source: "Handout 01: Wireless",
+        category: "Bluetooth Security",
+        question: "In which Bluetooth discoverable mode does a device reveal itself only to non-matched Inquiry Access Codes (IACs) that match during temporary conditions or specific events?",
+        options: [
+          "Discoverable Mode",
+          "Limited Discoverable Mode",
+          "Non-pairable Mode",
+          "Non-discoverable Mode"
+        ],
+        correct: 1,
+        rationale: "In limited discoverable mode, Bluetooth devices are discoverable only for a limited period or event, filtering non-matched IACs and revealing themselves only to those that match."
+      },
+      {
+        id: 12,
+        source: "Handout 01: Wireless",
+        category: "Bluetooth Attacks",
+        question: "Which Bluetooth attack is analogous to an ICMP Ping-of-Death attack, wherein an attacker sends an oversized ping packet to cause a buffer overflow on the victim's device?",
+        options: [
+          "Bluejacking",
+          "Bluesnarfing",
+          "Bluesmacking",
+          "Bluebugging"
+        ],
+        correct: 2,
+        rationale: "Bluesmacking occurs when an attacker transmits an oversized ping packet (via L2CAP) to a victim's Bluetooth device, creating a buffer overflow resulting in denial of service, identical in concept to Ping of Death."
+      },
+      {
+        id: 13,
+        source: "Handout 01: Wireless",
+        category: "Bluetooth Attacks",
+        question: "An attacker performs an unauthorized GET request using the Object Exchange (OBEX) protocol to steal phonebook contacts (/pb.vcf) or calendar entries (/cal.vcs). Which attack is this?",
+        options: [
+          "Bluesnarfing",
+          "Bluejacking",
+          "BluePrinting",
+          "Btlejacking"
+        ],
+        correct: 0,
+        rationale: "Bluesnarfing exploits vulnerabilities in the Object Exchange (OBEX) protocol to perform GET requests on sensitive files like /pb.vcf (phonebook) without authentication. Bluejacking only sends unsolicited messages/advertisements."
+      },
+      {
+        id: 14,
+        source: "Handout 01: Wireless",
+        category: "Bluetooth Attacks",
+        question: "What attack targets the encryption key negotiation protocol between two paired Bluetooth devices to decrypt traffic without being traced?",
+        options: [
+          "Bluebugging",
+          "KNOB (Key Negotiation of Bluetooth) Attack",
+          "BlueSniff",
+          "MAC Spoofing Attack"
+        ],
+        correct: 1,
+        rationale: "The KNOB (Key Negotiation of Bluetooth) attack enables an attacker to interfere during the negotiation of encryption keys between paired nodes, forcing weak keys to eavesdrop on keystrokes and documents without detection."
+      },
+      {
+        id: 15,
+        source: "Handout 01: Wireless",
+        category: "Wireless Security Tools",
+        question: "Which wireless security software is Aruba Networks' built-in Wireless Intrusion Prevention System (WIPS) designed to protect against rogue APs and unauthorized Wi-Fi devices?",
+        options: [
+          "Cisco Adaptive WIPS",
+          "RFProtect",
+          "AirMagnet Planner",
+          "Extreme AirDefense"
+        ],
+        correct: 1,
+        rationale: "RFProtect is Aruba Networks' integrated WIPS solution that protects against rogue APs, MITM attacks, and unauthorized devices. Cisco Adaptive WIPS is Cisco's solution, and AirMagnet Planner is for AP layout design."
+      },
+
+      // --- HANDOUT 2: MOBILE ATTACKS AND COUNTERMEASURES ---
+      {
+        id: 16,
+        source: "Handout 02: Mobile",
+        category: "Mobile Device Attacks",
+        question: "In which browser-based mobile attack does an attacker implant malicious code on a mobile device specifically to intercept and relay One-Time Passwords (OTPs) sent via SMS or voice calls?",
+        options: [
+          "SMiShing",
+          "Man-in-the-Mobile (MitMo)",
+          "Clickjacking",
+          "Framing"
+        ],
+        correct: 1,
+        rationale: "Man-in-the-Mobile (MitMo) involves implanting malware into a victim's smartphone to bypass two-factor verification systems by stealing OTPs transmitted via SMS or voice calls and relaying them to the attacker."
+      },
+      {
+        id: 17,
+        source: "Handout 02: Mobile",
+        category: "Mobile Device Attacks",
+        question: "An attack that exploits vulnerabilities in a mobile device's GSM/3GPP processor responsible for transmitting and receiving cellular radio signals is classified as what?",
+        options: [
+          "Baseband Attack",
+          "Carrier-loaded Exploit",
+          "Dynamic Runtime Injection",
+          "OS Data Caching Attack"
+        ],
+        correct: 0,
+        rationale: "Baseband attacks target vulnerabilities in the smartphone's baseband processor (GSM/3GPP baseband chipset), which directly handles cellular radio communications with cell towers."
+      },
+      {
+        id: 18,
+        source: "Handout 02: Mobile",
+        category: "Mobile Device Attacks",
+        question: "What is the primary difference between Apple iOS Jailbreaking and Android Rooting according to the security definitions in the handout?",
+        options: [
+          "Jailbreaking only affects apps, while rooting modifies the cellular baseband radio.",
+          "Jailbreaking removes Apple security mechanisms and sandbox restrictions; rooting attains privileged 'root access' within Android's subsystem.",
+          "Jailbreaking gives cleartext access to the SIM card, while rooting deletes hardware encryption keys.",
+          "Jailbreaking is sanctioned by enterprise MDM policies, whereas rooting is universally blocked."
+        ],
+        correct: 1,
+        rationale: "iOS Jailbreaking removes Apple's security controls, sandbox restrictions, and code execution limits. Android Rooting grants users privileged administrative control ('root access') within Android's Linux subsystem."
+      },
+      {
+        id: 19,
+        source: "Handout 02: Mobile",
+        category: "Network-Based Mobile Attacks",
+        question: "Which network-layer attack invisibly downgrades an HTTPS encrypted connection to an unencrypted HTTP connection, making it difficult for mobile users to detect?",
+        options: [
+          "DNS Poisoning",
+          "SSLStrip",
+          "Session Hijacking",
+          "Rogue AP Beaconing"
+        ],
+        correct: 1,
+        rationale: "SSLStrip is a Man-in-the-Middle technique that intercepts secure HTTPS connection requests and transparently downgrades them to unencrypted HTTP, which is especially deceptive on mobile browsers due to small address bars."
+      },
+      {
+        id: 20,
+        source: "Handout 02: Mobile",
+        category: "Web & Database Mobile Attacks",
+        question: "Which web-server attack exploits dynamically generated web pages to inject malicious client-side code such as JavaScript, VBScript, HTML, or Flash into legitimate websites?",
+        options: [
+          "Cross-Site Request Forgery (CSRF)",
+          "Cross-Site Scripting (XSS)",
+          "SQL Injection",
+          "Server Misconfiguration"
+        ],
+        correct: 1,
+        rationale: "Cross-Site Scripting (XSS) injects malicious client-side scripts (like JavaScript or HTML) into dynamic web pages viewed by other users. CSRF, by contrast, tricks authenticated browsers into submitting unauthorized commands."
+      },
+      {
+        id: 21,
+        source: "Handout 02: Mobile",
+        category: "Web & Database Mobile Attacks",
+        question: "When an attacker injects system-level commands through backend database query fields to gain superuser/root-level shell access to the host server, what database attack is taking place?",
+        options: [
+          "Data Dumping",
+          "OS Command Execution",
+          "Privilege Escalation",
+          "Weak Input Validation"
+        ],
+        correct: 1,
+        rationale: "OS Command Execution occurs when non-validated inputs allow attackers to inject operating system commands directly through database queries, potentially yielding root-level access to the host machine."
+      },
+      {
+        id: 22,
+        source: "Handout 02: Mobile",
+        category: "OWASP Top 10 Mobile",
+        question: "Under the OWASP Top 10 Mobile Risks, which category covers the misuse of platform features such as Android intents, platform permissions, Touch ID, or Keychain?",
+        options: [
+          "M1 - Improper Platform Usage",
+          "M2 - Insecure Data Storage",
+          "M6 - Insecure Authorization",
+          "M7 - Client Code Quality"
+        ],
+        correct: 0,
+        rationale: "M1: Improper Platform Usage covers the misuse or failure to use platform security controls and features, including Android intents, platform permissions, Touch ID, Keychain, or OS encryption APIs."
+      },
+      {
+        id: 23,
+        source: "Handout 02: Mobile",
+        category: "OWASP Top 10 Mobile",
+        question: "What distinction does OWASP make between M4 (Insecure Authentication) and M6 (Insecure Authorization)?",
+        options: [
+          "M4 deals with weak passwords; M6 deals exclusively with SQL injection.",
+          "M4 occurs when an app fails to identify the user; M6 occurs when client-side logic fails to enforce permission boundaries on resources.",
+          "M4 is an iOS vulnerability; M6 is strictly an Android vulnerability.",
+          "M4 occurs on the backend database; M6 occurs exclusively in the mobile browser cache."
+        ],
+        correct: 1,
+        rationale: "M4 (Insecure Authentication) relates to verifying who the user is (user identification and session management). M6 (Insecure Authorization) occurs when an identified user's access rights/privileges to specific resources are poorly enforced or verified on the client side."
+      },
+      {
+        id: 24,
+        source: "Handout 02: Mobile",
+        category: "OWASP Top 10 Mobile",
+        question: "An attacker uses binary patching, method hooking, and method swizzling to modify runtime memory and subvert application logic for financial gain. Which OWASP risk is this?",
+        options: [
+          "M5 - Insufficient Cryptography",
+          "M8 - Code Tampering",
+          "M9 - Reverse Engineering",
+          "M10 - Extraneous Functionality"
+        ],
+        correct: 1,
+        rationale: "M8: Code Tampering includes binary patching, local resource modification, method hooking, method swizzling, and dynamic memory modification of apps resident on the device."
+      },
+      {
+        id: 25,
+        source: "Handout 02: Mobile",
+        category: "OWASP Top 10 Mobile",
+        question: "Using disassemblers and binary inspection tools such as IDA Pro, Hopper, or otool to understand an application's internal algorithms and backend API keys falls under which category?",
+        options: [
+          "M7 - Client Code Quality",
+          "M8 - Code Tampering",
+          "M9 - Reverse Engineering",
+          "M10 - Extraneous Functionality"
+        ],
+        correct: 2,
+        rationale: "M9: Reverse Engineering covers analyzing the final compiled binary using tools like IDA Pro, Hopper, and otool to reveal source code, intellectual property, APIs, and encryption keys."
+      },
+      {
+        id: 26,
+        source: "Handout 02: Mobile",
+        category: "OWASP Top 10 Mobile",
+        question: "A developer accidentally leaves test-phase two-factor authentication bypass routines and plain-text admin credentials in code comments when deploying to production. Which OWASP risk is present?",
+        options: [
+          "M3 - Insecure Communication",
+          "M5 - Insufficient Cryptography",
+          "M7 - Client Code Quality",
+          "M10 - Extraneous Functionality"
+        ],
+        correct: 3,
+        rationale: "M10: Extraneous Functionality occurs when developers leave internal development security bypasses, administrative backdoors, or hidden debug credentials in the final production package."
+      },
+      {
+        id: 27,
+        source: "Handout 02: Mobile",
+        category: "Mobile Security Guidelines",
+        question: "According to the mobile device security guidelines in Handout 2, which recommendation helps thwart unauthorized passcode cracking via brute-force?",
+        options: [
+          "Use a 4-digit sequential PIN and disable biometric locks.",
+          "Enable the lockout/wipe feature after a specific number of failed attempts.",
+          "Allow auto-syncing of credentials across public Wi-Fi access points.",
+          "Store Keychain backups in plain text on unencrypted SD cards."
+        ],
+        correct: 1,
+        rationale: "Guidelines recommend configuring complex 8-character passcodes, setting an idle timeout, and enabling lockout or 'erase data' to ON after a set number of incorrect attempts to thwart brute force."
+      },
+      {
+        id: 28,
+        source: "Handout 02: Mobile",
+        category: "Mobile Countermeasures",
+        question: "What enterprise software solution is recommended to remotely monitor, manage, secure, and support mobile devices while enforcing anti-rooting/jailbreaking policies across an organization?",
+        options: [
+          "Mobile Device Management (MDM)",
+          "Wireless Zero Configuration (WZC)",
+          "Object Exchange Protocol (OBEX)",
+          "Demand Priority Interface (DPI)"
+        ],
+        correct: 0,
+        rationale: "Mobile Device Management (MDM) software is used in enterprise environments to secure, monitor, manage, and enforce security policies (like detecting/preventing jailbreaking and rooting) across deployed mobile fleets."
+      },
+      {
+        id: 29,
+        source: "Handout 02: Mobile",
+        category: "Mobile Security Tools",
+        question: "Which security tool is described as an enterprise-grade mobile threat defense (MTD) solution designed to detect and prevent advanced mobile attacks in real time?",
+        options: [
+          "BullGuard Mobile Security",
+          "Zimperium's zIPS",
+          "Lookout Personal",
+          "WZCook"
+        ],
+        correct: 1,
+        rationale: "Zimperium's zIPS is specifically designated in Handout 2 as an enterprise-grade mobile threat defense solution that detects and mitigates advanced real-time mobile threats."
+      },
+      {
+        id: 30,
+        source: "Handout 02: Mobile",
+        category: "Mobile Security Guidelines",
+        question: "When configuring device backups according to Handout 2, why should enterprise data backup locations and cloud synchronization be strictly controlled?",
+        options: [
+          "To prevent sensitive corporate data from leaking into personal unmanaged cloud accounts.",
+          "Because mobile cloud backups permanently deactivate hardware encryption chips.",
+          "To force baseband radio processors into limited discoverable mode.",
+          "Because Android devices cannot restore data over cellular wireless connections."
+        ],
+        correct: 0,
+        rationale: "Backups should be encrypted, controlled, and restricted so that sensitive enterprise data is not backed up into unauthorized personal cloud storage (e.g., personal Google/iCloud accounts) where organizations lose data governance."
+      }
+    ];
+
+    // State
+    let currentMode = 'practice'; // 'practice' or 'timed'
+    let currentQuestionIdx = 0;
+    let userAnswers = new Array(questions.length).fill(null);
+    let flaggedQuestions = new Set();
+    let timerInterval = null;
+    let secondsLeft = 30 * 60; // 30 minutes
+
+    // Elements
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const examScreen = document.getElementById('examScreen');
+    const resultScreen = document.getElementById('resultScreen');
+    const examMetaBar = document.getElementById('examMetaBar');
+    const timerContainer = document.getElementById('timerContainer');
+    const timerDisplay = document.getElementById('timerDisplay');
+    const questionCategoryTag = document.getElementById('questionCategoryTag');
+    const questionSourceTag = document.getElementById('questionSourceTag');
+    const currentQIndexDisplay = document.getElementById('currentQIndexDisplay');
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const feedbackBox = document.getElementById('feedbackBox');
+    const feedbackTitle = document.getElementById('feedbackTitle');
+    const feedbackRationale = document.getElementById('feedbackRationale');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const progressStatusText = document.getElementById('progressStatusText');
+    const questionGrid = document.getElementById('questionGrid');
+    const navCompletionPct = document.getElementById('navCompletionPct');
+    const flagBtn = document.getElementById('flagBtn');
+    const flagText = document.getElementById('flagText');
+
+    function toggleModeSelection(radio) {
+      currentMode = radio.value;
+      const practiceLabel = document.getElementById('modePracticeLabel');
+      const timedLabel = document.getElementById('modeTimedLabel');
+
+      if (currentMode === 'practice') {
+        practiceLabel.classList.add('border-indigo-600', 'bg-indigo-950/30');
+        practiceLabel.classList.remove('border-slate-700', 'bg-slate-850/40');
+        timedLabel.classList.remove('border-indigo-600', 'bg-indigo-950/30');
+        timedLabel.classList.add('border-slate-700', 'bg-slate-850/40');
+      } else {
+        timedLabel.classList.add('border-indigo-600', 'bg-indigo-950/30');
+        timedLabel.classList.remove('border-slate-700', 'bg-slate-850/40');
+        practiceLabel.classList.remove('border-indigo-600', 'bg-indigo-950/30');
+        practiceLabel.classList.add('border-slate-700', 'bg-slate-850/40');
+      }
+    }
+
+    function startExam() {
+      welcomeScreen.classList.add('hidden');
+      resultScreen.classList.add('hidden');
+      examScreen.classList.remove('hidden');
+      examMetaBar.classList.remove('hidden');
+
+      if (currentMode === 'timed') {
+        timerContainer.classList.remove('hidden');
+        startTimer();
+      } else {
+        timerContainer.classList.add('hidden');
+      }
+
+      initGrid();
+      loadQuestion(0);
+    }
+
+    function startTimer() {
+      secondsLeft = 30 * 60;
+      updateTimerDisplay();
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        secondsLeft--;
+        updateTimerDisplay();
+        if (secondsLeft <= 0) {
+          clearInterval(timerInterval);
+          alert("Time is up! Submitting your exam automatically.");
+          finishExam();
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const minutes = Math.floor(secondsLeft / 60);
+      const seconds = secondsLeft % 60;
+      timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function initGrid() {
+      questionGrid.innerHTML = '';
+      for (let i = 0; i < questions.length; i++) {
+        const btn = document.createElement('button');
+        btn.id = `gridBtn-${i}`;
+        btn.className = `h-9 w-full rounded font-mono text-xs font-semibold flex items-center justify-center transition border border-slate-700 bg-slate-800 text-slate-400 hover:border-slate-500`;
+        btn.textContent = i + 1;
+        btn.onclick = () => loadQuestion(i);
+        questionGrid.appendChild(btn);
+      }
+      updateGridState();
+    }
+
+    function updateGridState() {
+      let answeredCount = 0;
+      for (let i = 0; i < questions.length; i++) {
+        const btn = document.getElementById(`gridBtn-${i}`);
+        if (!btn) continue;
+
+        const isAnswered = userAnswers[i] !== null;
+        const isFlagged = flaggedQuestions.has(i);
+        const isCurrent = currentQuestionIdx === i;
+
+        if (isAnswered) answeredCount++;
+
+        // Reset base classes
+        btn.className = "h-9 w-full rounded font-mono text-xs font-semibold flex items-center justify-center transition relative";
+
+        if (isCurrent) {
+          btn.classList.add("ring-2", "ring-indigo-400", "font-bold");
+        }
+
+        if (isFlagged) {
+          btn.classList.add("border-amber-400", "text-amber-300", "bg-amber-950/40");
+        } else if (isAnswered) {
+          btn.classList.add("bg-indigo-600", "text-white", "border-indigo-500");
+        } else {
+          btn.classList.add("bg-slate-800", "text-slate-400", "border-slate-700", "hover:border-slate-500");
+        }
+
+        // Small indicator dot for flagged + answered
+        if (isFlagged && isAnswered) {
+          const dot = document.createElement('span');
+          dot.className = "absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-400";
+          btn.appendChild(dot);
+        }
+      }
+
+      progressStatusText.textContent = `Answered: ${answeredCount} / ${questions.length}`;
+      const pct = Math.round((answeredCount / questions.length) * 100);
+      navCompletionPct.textContent = `${pct}% Complete`;
+    }
+
+    function loadQuestion(index) {
+      currentQuestionIdx = index;
+      const q = questions[index];
+
+      // Update headers & meta
+      currentQIndexDisplay.textContent = index + 1;
+      questionCategoryTag.textContent = q.category;
+      questionSourceTag.textContent = q.source;
+      questionText.textContent = q.question;
+
+      // Update flag button status
+      if (flaggedQuestions.has(index)) {
+        flagBtn.classList.add('border-amber-400', 'text-amber-400', 'bg-amber-950/20');
+        flagText.textContent = 'Flagged';
+      } else {
+        flagBtn.classList.remove('border-amber-400', 'text-amber-400', 'bg-amber-950/20');
+        flagText.textContent = 'Flag for Review';
+      }
+
+      // Populate options
+      optionsContainer.innerHTML = '';
+      const selectedChoice = userAnswers[index];
+
+      q.options.forEach((optText, optIdx) => {
+        const optBtn = document.createElement('button');
+        optBtn.className = `w-full text-left p-4 rounded-xl border text-sm font-medium transition flex items-start space-x-3`;
+
+        const letter = String.fromCharCode(65 + optIdx);
+
+        // Styling logic depending on mode & whether an answer was chosen
+        let borderClass = 'border-slate-700 bg-slate-800/60 text-slate-200 hover:border-slate-500';
+        let badgeClass = 'bg-slate-700 text-slate-300';
+
+        if (currentMode === 'practice' && selectedChoice !== null) {
+          // Practice mode feedback colors
+          if (optIdx === q.correct) {
+            borderClass = 'border-emerald-500 bg-emerald-950/30 text-emerald-200 font-semibold';
+            badgeClass = 'bg-emerald-600 text-white';
+          } else if (optIdx === selectedChoice && selectedChoice !== q.correct) {
+            borderClass = 'border-rose-500 bg-rose-950/30 text-rose-200';
+            badgeClass = 'bg-rose-600 text-white';
+          }
+        } else if (selectedChoice === optIdx) {
+          borderClass = 'border-indigo-500 bg-indigo-950/30 text-white font-semibold ring-1 ring-indigo-500';
+          badgeClass = 'bg-indigo-600 text-white';
+        }
+
+        optBtn.className += ` ${borderClass}`;
+        optBtn.innerHTML = `
+          <span class="px-2 py-0.5 rounded text-xs font-bold ${badgeClass} shrink-0">${letter}</span>
+          <span class="flex-1 leading-snug">${optText}</span>
+        `;
+
+        optBtn.onclick = () => selectOption(optIdx);
+        optionsContainer.appendChild(optBtn);
+      });
+
+      // Show rationale in practice mode if answered
+      if (currentMode === 'practice' && selectedChoice !== null) {
+        showFeedback(selectedChoice === q.correct, q.rationale);
+      } else {
+        feedbackBox.classList.add('hidden');
+      }
+
+      // Prev / Next button states
+      prevBtn.disabled = index === 0;
+      if (index === questions.length - 1) {
+        nextBtn.textContent = 'Finish Exam';
+        nextBtn.classList.remove('bg-indigo-600', 'hover:bg-indigo-500');
+        nextBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-500');
+      } else {
+        nextBtn.textContent = 'Next →';
+        nextBtn.classList.remove('bg-emerald-600', 'hover:bg-emerald-500');
+        nextBtn.classList.add('bg-indigo-600', 'hover:bg-indigo-500');
+      }
+
+      updateGridState();
+    }
+
+    function selectOption(optionIndex) {
+      userAnswers[currentQuestionIdx] = optionIndex;
+      loadQuestion(currentQuestionIdx);
+    }
+
+    function showFeedback(isCorrect, rationaleText) {
+      feedbackBox.classList.remove('hidden');
+      if (isCorrect) {
+        feedbackBox.className = 'p-4 rounded-xl mb-6 border border-emerald-500/40 bg-emerald-950/20 text-emerald-300';
+        feedbackTitle.innerHTML = `
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Correct Answer</span>
+        `;
+      } else {
+        feedbackBox.className = 'p-4 rounded-xl mb-6 border border-rose-500/40 bg-rose-950/20 text-rose-300';
+        feedbackTitle.innerHTML = `
+          <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <span>Incorrect</span>
+        `;
+      }
+      feedbackRationale.textContent = rationaleText;
+    }
+
+    function navigateQuestion(direction) {
+      const nextIndex = currentQuestionIdx + direction;
+      if (nextIndex >= 0 && nextIndex < questions.length) {
+        loadQuestion(nextIndex);
+      } else if (nextIndex >= questions.length) {
+        confirmFinishExam();
+      }
+    }
+
+    function toggleFlagCurrentQuestion() {
+      if (flaggedQuestions.has(currentQuestionIdx)) {
+        flaggedQuestions.delete(currentQuestionIdx);
+      } else {
+        flaggedQuestions.add(currentQuestionIdx);
+      }
+      loadQuestion(currentQuestionIdx);
+    }
+
+    function confirmFinishExam() {
+      const unanswered = userAnswers.filter(a => a === null).length;
+      let msg = "Are you ready to submit your exam?";
+      if (unanswered > 0) {
+        msg = `You have ${unanswered} unanswered question(s). Are you sure you want to finalize and submit?`;
+      }
+      if (confirm(msg)) {
+        finishExam();
+      }
+    }
+
+    function finishExam() {
+      if (timerInterval) clearInterval(timerInterval);
+
+      examScreen.classList.add('hidden');
+      examMetaBar.classList.add('hidden');
+      resultScreen.classList.remove('hidden');
+
+      calculateResults();
+    }
+
+    function calculateResults() {
+      let score = 0;
+      const categoryStats = {};
+
+      questions.forEach((q, i) => {
+        const userChoice = userAnswers[i];
+        const isCorrect = userChoice === q.correct;
+        if (isCorrect) score++;
+
+        if (!categoryStats[q.category]) {
+          categoryStats[q.category] = { total: 0, correct: 0 };
+        }
+        categoryStats[q.category].total++;
+        if (isCorrect) categoryStats[q.category].correct++;
+      });
+
+      const pct = Math.round((score / questions.length) * 100);
+      const scorePercentage = document.getElementById('scorePercentage');
+      const scoreFraction = document.getElementById('scoreFraction');
+      const resultBadge = document.getElementById('resultBadge');
+      const resultFeedbackNote = document.getElementById('resultFeedbackNote');
+
+      scorePercentage.textContent = `${pct}%`;
+      scoreFraction.textContent = `You scored ${score} out of ${questions.length}`;
+
+      if (pct >= 75) {
+        resultBadge.className = "inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+        resultBadge.textContent = "Passed • High Proficiency";
+        resultFeedbackNote.className = "text-emerald-400 font-medium";
+        resultFeedbackNote.textContent = "Excellent performance! You have demonstrated a solid command of both wireless vulnerabilities and mobile attack concepts.";
+      } else {
+        resultBadge.className = "inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 bg-rose-500/20 text-rose-400 border border-rose-500/40";
+        resultBadge.textContent = "Needs Review • Retake Recommended";
+        resultFeedbackNote.className = "text-rose-400 font-medium";
+        resultFeedbackNote.textContent = "Take time to review the items you missed below, especially the specific tools and attack vectors from both handouts.";
+      }
+
+      // Render category breakdown
+      const breakdownContainer = document.getElementById('categoryBreakdownContainer');
+      breakdownContainer.innerHTML = '';
+      for (const [cat, data] of Object.entries(categoryStats)) {
+        const catPct = Math.round((data.correct / data.total) * 100);
+        const div = document.createElement('div');
+        div.className = "p-3 rounded-xl bg-slate-850 border border-slate-700 flex flex-col justify-between";
+        div.innerHTML = `
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-xs font-semibold text-slate-300 truncate max-w-[70%]">${cat}</span>
+            <span class="text-xs font-mono font-bold ${catPct >= 75 ? 'text-emerald-400' : 'text-amber-400'}">${data.correct}/${data.total} (${catPct}%)</span>
+          </div>
+          <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+            <div class="h-full rounded-full ${catPct >= 75 ? 'bg-emerald-500' : 'bg-amber-500'}" style="width: ${catPct}%"></div>
+          </div>
+        `;
+        breakdownContainer.appendChild(div);
+      }
+
+      // Render comprehensive review items list
+      renderReviewList();
+    }
+
+    function renderReviewList() {
+      const reviewList = document.getElementById('reviewItemsList');
+      reviewList.innerHTML = '';
+
+      questions.forEach((q, i) => {
+        const userChoice = userAnswers[i];
+        const isCorrect = userChoice === q.correct;
+        const isUnanswered = userChoice === null;
+
+        const card = document.createElement('div');
+        card.className = `p-5 rounded-xl border ${isCorrect ? 'border-emerald-500/30 bg-emerald-950/10' : 'border-rose-500/30 bg-rose-950/10'}`;
+
+        const letterMap = ['A', 'B', 'C', 'D'];
+
+        card.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center space-x-2">
+              <span class="font-bold text-sm ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}">Item ${i + 1}</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400">${q.category}</span>
+            </div>
+            <span class="text-xs font-bold uppercase px-2.5 py-1 rounded ${isCorrect ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/20 text-rose-300'}">
+              ${isCorrect ? 'Correct' : (isUnanswered ? 'Unanswered' : 'Incorrect')}
+            </span>
+          </div>
+
+          <p class="text-slate-200 text-sm font-medium mb-3">${q.question}</p>
+
+          <div class="space-y-1.5 mb-3 text-xs">
+            ${q.options.map((opt, oIdx) => {
+              let optStyle = "text-slate-400 bg-slate-800/40 border border-slate-800";
+              if (oIdx === q.correct) {
+                optStyle = "text-emerald-300 bg-emerald-900/30 border border-emerald-600/50 font-semibold";
+              } else if (oIdx === userChoice && !isCorrect) {
+                optStyle = "text-rose-300 bg-rose-900/30 border border-rose-600/50";
+              }
+              return `
+                <div class="p-2 rounded flex items-center space-x-2 ${optStyle}">
+                  <span class="font-mono font-bold">${letterMap[oIdx]}.</span>
+                  <span>${opt}</span>
+                  ${oIdx === q.correct ? '<span class="ml-auto text-emerald-400 font-bold text-[11px]">Correct Answer</span>' : ''}
+                  ${oIdx === userChoice && !isCorrect ? '<span class="ml-auto text-rose-400 font-bold text-[11px]">Your Choice</span>' : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <div class="p-3 rounded-lg bg-slate-800/80 border border-slate-700 text-xs text-slate-300 leading-relaxed">
+            <span class="font-bold text-indigo-300 block mb-1">Handout Rationale:</span>
+            ${q.rationale}
+          </div>
+        `;
+
+        reviewList.appendChild(card);
+      });
+    }
+
+    function scrollToReviewSection() {
+      document.getElementById('fullReviewSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function restartExam() {
+      if (timerInterval) clearInterval(timerInterval);
+      userAnswers = new Array(questions.length).fill(null);
+      flaggedQuestions.clear();
+      currentQuestionIdx = 0;
+      secondsLeft = 30 * 60;
+
+      resultScreen.classList.add('hidden');
+      welcomeScreen.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "IT2511 Information Assurance Reviewer",
+  "short_name": "IT2511 Reviewer",
+  "description": "Interactive wireless and mobile security reviewer and mock exam.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": []
+}
