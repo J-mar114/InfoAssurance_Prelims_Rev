@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace YOUR-USERNAME and YOUR-REPOSITORY before submitting to Google. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/</loc>
+    <loc>https://j-mar114.github.io/InfoAssurance_Prelims_Rev/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

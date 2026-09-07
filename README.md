@@ -2,6 +2,8 @@
 
 An interactive, browser-based reviewer and 30-item mock exam for wireless and mobile security.
 
+Live site: https://j-mar114.github.io/InfoAssurance_Prelims_Rev/
+
 ## Topics covered
 
 - Wireless standards, spread spectrum, Wi-Fi encryption, and authentication
@@ -27,5 +29,5 @@ The site is static and works on GitHub Pages, Netlify, or any standard web host.
 
 - Keep the repository public if you want search engines to crawl it.
 - Add the deployed URL to Google Search Console and request indexing.
-- Replace the placeholder URL in `sitemap.xml` with the final GitHub Pages URL before submitting it.
+- Submit `https://j-mar114.github.io/InfoAssurance_Prelims_Rev/sitemap.xml` in Google Search Console.
 - Share the deployed page from relevant class or study communities to help discovery.

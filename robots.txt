@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace this placeholder with the final GitHub Pages URL before publishing.
-# Sitemap: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml
+Sitemap: https://j-mar114.github.io/InfoAssurance_Prelims_Rev/sitemap.xml
